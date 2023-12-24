@@ -1,20 +1,20 @@
--   id: clang-format
-    name: clang-format
-    description: ''
-    entry: clang-format -i
-    language: python
-    'types_or': [c++, c, c#, cuda, java, javascript, json, objective-c, proto, textproto]
-    args: ["-style=file"]
-    require_serial: false
-    additional_dependencies: []
-    minimum_pre_commit_version: '2.9.2'
--   id: clang-tidy
-    name: clang-tidy
-    description: ''
-    entry: clang-tidy
-    language: python
-    'types_or': [c++, c, c#, cuda]
-    args: ["-style=file"]
-    require_serial: false
-    additional_dependencies: []
-    minimum_pre_commit_version: '2.9.2'
+- id: clang-format
+  name: clang-format
+  description: ''
+  entry: clang-format -i
+  language: python
+  'types_or': [c++, c, c#, cuda, java, javascript, json, objective-c, proto, textproto]
+  args: ["-style=file"]
+  require_serial: false
+  additional_dependencies: []
+  minimum_pre_commit_version: '2.9.2'
+- id: clang-tidy
+  name: clang-tidy
+  description: 'clang-tidy hook. Clang-tidy has many capabilities and can help you maintain you C++ code modern.'
+  entry: clang-tidy
+  language: python
+  'types_or': [c++, c, c#, cuda]
+  args: ["-fix"]
+  require_serial: false
+  additional_dependencies: []
+  minimum_pre_commit_version: '2.9.2'
