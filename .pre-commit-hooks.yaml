@@ -8,3 +8,13 @@
     require_serial: false
     additional_dependencies: []
     minimum_pre_commit_version: '2.9.2'
+-   id: clang-tidy
+    name: clang-tidy
+    description: ''
+    entry: clang-tidy
+    language: python
+    'types_or': [c++, c, c#, cuda]
+    args: ["-style=file"]
+    require_serial: false
+    additional_dependencies: []
+    minimum_pre_commit_version: '2.9.2'
