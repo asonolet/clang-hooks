@@ -14,7 +14,7 @@
   entry: clang-tidy
   language: python
   'types_or': [c++, c, c#, cuda]
-  args: ["-fix"]
+  args: ["--fix"]
   require_serial: false
   additional_dependencies: []
   minimum_pre_commit_version: '2.9.2'
